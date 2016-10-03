@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Web Fundamentals</title>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				font-family: "arial", sans-serif;
+
+			}
+			h1{
+
+				background-color: black;
+				padding: 10px
+			}
+
+
+			h2 {
+
+				color: black;
+			}
+			hr{
+
+				background-color: #ccc;
+			
+			}
+			li {
+
+				//background-color: antiquewhite;
+			}
+			.special {
+
+				//font-weight: bold;
+				//border: solid 1px red;
+			}
+			label {
+
+				font-weight: normal;
+			}
+			ul li {
+
+				list-style: none;
+				font-weight: normal;
+			}
+			li:hover {
+
+				background-color: black;
+				color: white;
+				cursor: pointer;
+			}
+
+			#content{
+
+				padding-left:10px;
+
+
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="color: white">Gapiminder - Wealth and Health of Nations</h1>
+		<div id="content">
+			<h2>Countries</h2>
+			<label>Name</label>
+			<input type="text" placeholder="Add a country..." id="textInput"></textarea>
+			<input type="button" value="Add" onclick="addNewItem();"> 
+			<hr>
+			<ul id="items">
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+
+		var addItem = "";
+		function addNewItem(addItem){
+
+			if(!addItem){
+				addItem = document.getElementById("textInput").value;
+			}
+
+			var listOfItems = document.getElementById("items");
+			var newItem = document.createElement("li");
+			newItem.innerHTML= addItem;
+			listOfItems.appendChild(newItem);
+
+		}
+
+
+
+
+	</script>
+
+</html>
